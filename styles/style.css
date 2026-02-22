@@ -1,0 +1,190 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+.geist-font {
+  font-family: "Geist", sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+header #counter-display {
+  max-width: 70%;
+  box-shadow: 0px 0px 25px 9px #6666661b;
+  margin: 60px auto;
+  padding: 30px 20px;
+}
+
+header #counter-display h1 {
+  margin-bottom: 20px;
+  color: #002c5c;
+}
+
+header #counter-display > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+header #counter-display > div > div {
+  box-shadow: 0px 0px 25px 9px #6666661b;
+  padding: 10px 20px;
+  width: 340px;
+  border-radius: 8px;
+}
+
+header #counter-display > div > div p {
+  font-size: #323b49;
+  font-size: 20px;
+}
+
+#total-display {
+  color: #002c5c;
+  font-size: 30px;
+  padding: 10px 0;
+}
+
+#interview-display {
+  color: #10b981;
+  font-size: 30px;
+  padding: 10px 0;
+}
+
+#rejected-display {
+  color: #ef4444;
+  font-size: 30px;
+  padding: 10px 0;
+}
+
+main #all-job-header {
+  max-width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px 20px;
+  border-top: 3px solid #0000000f;
+}
+
+#all-job-header .available-jobs-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#all-job-header .available-jobs-title p {
+  color: #64748b;
+}
+
+#all-job-header .btn-container {
+  display: flex;
+  gap: 10px;
+}
+
+#all-job-header .btn-container button {
+  width: 80px;
+  /* background: #3b82f6; */
+  background: #fff;
+  /* color: #fff; */
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 4px;
+  border: 2px solid #0000001b;
+  cursor: pointer;
+}
+
+#all-job-container {
+  max-width: 70%;
+  margin: 30px auto;
+}
+
+#all-job-container .job-card {
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  margin: 30px auto;
+  box-shadow: 0px 0px 25px 9px #74747413;
+}
+
+#all-job-container .job-card h2 {
+  color: #002c5c;
+}
+
+#all-job-container .job-card p {
+  color: #64748b;
+}
+
+#all-job-container .job-card .black-p {
+  color: #000;
+}
+
+#all-job-container .job-card #card-status {
+  background: #eef4ff;
+  font-weight: bold;
+  color: #002c5c;
+  height: 40px;
+  width: 120px;
+  border-radius: 4px;
+}
+
+#all-job-container .job-card .btn-container {
+  display: flex;
+  gap: 15px;
+}
+
+#all-job-container .job-card .btn-container button {
+  background: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+  height: 40px;
+  width: 120px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#all-job-container .job-card .btn-container .interview-btn {
+  border-color: #10b981;
+  color: #10b981;
+}
+
+#all-job-container .job-card .btn-container .rejected-btn {
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+#all-job-container .job-card #delete-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 40px;
+  cursor: pointer;
+}
+
+#no-job-display {
+  box-shadow: 0px 0px 25px 9px #8c8c8c18;
+  max-width: 70%;
+  margin: 0 auto 30px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+#no-job-display h2 {
+  color: #002c5c;
+}
+
+#no-job-display p {
+  color: #64748b;
+}

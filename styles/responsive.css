@@ -1,0 +1,24 @@
+@media screen and (max-width: 576px) {
+  header #counter-display {
+    max-width: 90%;
+  }
+
+  header #counter-display > div {
+    display: grid;
+    gap: 20px;
+    justify-self: center;
+    align-items: center;
+  }
+
+  main #all-job-header {
+    max-width: 90%;
+  }
+
+  #all-job-container {
+    max-width: 90%;
+  }
+
+  #no-job-display {
+    max-width: 90%;
+  }
+}
