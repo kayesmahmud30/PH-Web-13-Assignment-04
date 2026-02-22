@@ -49,6 +49,7 @@ function toggleStyle(id) {
     renderInterview();
   } else if (id == "show-all-btn") {
     allCardSection.classList.remove("hidden");
+    noJobSection.classList.add('hidden')
     filteredSection.classList.add("hidden");
   } else if (id == "show-rejected-btn") {
     allCardSection.classList.add("hidden");
