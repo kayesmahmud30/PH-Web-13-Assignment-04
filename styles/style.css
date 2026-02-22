@@ -11,7 +11,7 @@
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 header #counter-display {
@@ -79,6 +79,10 @@ main #all-job-header {
   align-items: center;
 }
 
+#all-job-header .available-jobs-title h3 {
+  color: #002c5c;
+}
+
 #all-job-header .available-jobs-title p {
   color: #64748b;
 }
@@ -100,11 +104,13 @@ main #all-job-header {
   cursor: pointer;
 }
 
-#all-job-container {
+#all-job-container,
+#filtered-section {
   max-width: 70%;
   margin: 30px auto;
 }
 
+#filtered-section .job-card,
 #all-job-container .job-card {
   padding: 30px 20px;
   display: flex;
@@ -115,18 +121,22 @@ main #all-job-header {
   box-shadow: 0px 0px 25px 9px #74747413;
 }
 
+#filtered-section .job-card h2,
 #all-job-container .job-card h2 {
   color: #002c5c;
 }
 
+#filtered-section .job-card p,
 #all-job-container .job-card p {
   color: #64748b;
 }
 
+#filtered-section .job-card .black-p,
 #all-job-container .job-card .black-p {
   color: #000;
 }
 
+#filtered-section .job-card #card-status,
 #all-job-container .job-card #card-status {
   background: #eef4ff;
   font-weight: bold;
@@ -136,11 +146,13 @@ main #all-job-header {
   border-radius: 4px;
 }
 
+#filtered-section .job-card .btn-container,
 #all-job-container .job-card .btn-container {
   display: flex;
   gap: 15px;
 }
 
+#filtered-section .job-card .btn-container button,
 #all-job-container .job-card .btn-container button {
   background: none;
   border: 2px solid transparent;
@@ -151,16 +163,19 @@ main #all-job-header {
   cursor: pointer;
 }
 
+#filtered-section .job-card .btn-container .interview-btn,
 #all-job-container .job-card .btn-container .interview-btn {
   border-color: #10b981;
   color: #10b981;
 }
 
+#filtered-section .job-card .btn-container .rejected-btn,
 #all-job-container .job-card .btn-container .rejected-btn {
   border-color: #ef4444;
   color: #ef4444;
 }
 
+#filtered-section .job-card #delete-icon,
 #all-job-container .job-card #delete-icon {
   position: absolute;
   right: 0;
