@@ -5,6 +5,7 @@ let currentStatus = "all";
 let totalCount = document.getElementById("total-display");
 let interviewCount = document.getElementById("interview-display");
 let rejectedCount = document.getElementById("rejected-display");
+let allJobQuantity = document.getElementById("job-quantity");
 
 const allFilterBtn = document.getElementById("show-all-btn");
 const interviewFilterBtn = document.getElementById("show-interview-btn");
@@ -19,6 +20,8 @@ function calculateCount() {
   totalCount.innerText = allCardSection.children.length;
   interviewCount.innerText = interviewList.length;
   rejectedCount.innerText = rejectedList.length;
+
+  // allJobQuantity.innerText = currentStatus
 }
 
 calculateCount();
@@ -141,6 +144,11 @@ mainContainer.addEventListener("click", function (event) {
   }
 });
 mainContainer.addEventListener("click", function (event) {
+  if (event.target.classList.contains("fa-trash-can")) {
+    event.target.parentNode.parentNode.remove();
+    calculateCount();
+  }
+
   if (event.target.classList.contains("interview-btn")) {
     const parentNode = event.target.parentNode.parentNode;
 

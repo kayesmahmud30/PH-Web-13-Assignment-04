@@ -15,7 +15,8 @@
     max-width: 90%;
   }
 
-  #all-job-container {
+  #all-job-container,
+  #filtered-section {
     max-width: 90%;
   }
 
