@@ -15,7 +15,6 @@ const mainContainer = document.querySelector("main");
 const filteredSection = document.getElementById("filtered-section");
 const noJobSection = document.getElementById("no-job-display");
 
-// Count the displaying Numbers....
 function calculateCount() {
   totalCount.innerText = allCardSection.children.length;
   interviewCount.innerText = interviewList.length;
@@ -24,7 +23,6 @@ function calculateCount() {
 
 calculateCount();
 
-// Toggle Button added....
 function toggleStyle(id) {
   allFilterBtn.style.background = "none";
   allFilterBtn.style.color = "black";
@@ -47,7 +45,7 @@ function toggleStyle(id) {
 
     renderInterview();
   } else if (id == "show-all-btn") {
-    allCardSection.classList.remove("hidden"); //No job will added
+    allCardSection.classList.remove("hidden");
     filteredSection.classList.add("hidden");
   } else if (id == "show-rejected-btn") {
     allCardSection.classList.add("hidden");
@@ -56,13 +54,22 @@ function toggleStyle(id) {
   }
 }
 
-//-----------------Main Function--------------------------
+function noJobBadge() {
+  if (currentStatus !== "show-all-btn") {
+    if (filteredSection.children.length === 0) {
+      noJobSection.classList.remove("hidden");
+    } else {
+      noJobSection.classList.add("hidden");
+    }
+  } else {
+    noJobSection.classList.add("hidden");
+  }
+}
 
 mainContainer.addEventListener("click", function (event) {
   if (event.target.classList.contains("interview-btn")) {
     const parentNode = event.target.parentNode.parentNode;
 
-    // parentNode.querySelector(".job-status").innerText = "INTERVIEW";
     parentNode.querySelector(".job-status").innerText = event.target.innerText;
 
     const jobName = parentNode.querySelector(".job-name").innerText;
@@ -99,7 +106,6 @@ mainContainer.addEventListener("click", function (event) {
   } else if (event.target.classList.contains("rejected-btn")) {
     const parentNode = event.target.parentNode.parentNode;
 
-    // parentNode.querySelector(".job-status").innerText = "INTERVIEW";
     parentNode.querySelector(".job-status").innerText = event.target.innerText;
 
     const jobName = parentNode.querySelector(".job-name").innerText;
@@ -138,7 +144,6 @@ mainContainer.addEventListener("click", function (event) {
   if (event.target.classList.contains("interview-btn")) {
     const parentNode = event.target.parentNode.parentNode;
 
-    // parentNode.querySelector(".job-status").innerText = "INTERVIEW";
     parentNode.querySelector(".job-status").innerText = event.target.innerText;
 
     const jobName = parentNode.querySelector(".job-name").innerText;
@@ -175,7 +180,6 @@ mainContainer.addEventListener("click", function (event) {
   } else if (event.target.classList.contains("rejected-btn")) {
     const parentNode = event.target.parentNode.parentNode;
 
-    // parentNode.querySelector(".job-status").innerText = "INTERVIEW";
     parentNode.querySelector(".job-status").innerText = event.target.innerText;
 
     const jobName = parentNode.querySelector(".job-name").innerText;
@@ -238,7 +242,7 @@ function renderInterview() {
 
     filteredSection.appendChild(div);
   }
-  // renderRejected();
+  noJobBadge();
   calculateCount();
 }
 
@@ -268,5 +272,6 @@ function renderRejected() {
 
     filteredSection.appendChild(div);
   }
+  noJobBadge();
   calculateCount();
 }
