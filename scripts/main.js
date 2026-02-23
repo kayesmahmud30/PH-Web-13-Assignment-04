@@ -164,6 +164,7 @@ mainContainer.addEventListener("click", function (event) {
 mainContainer.addEventListener("click", function (event) {
   if (event.target.classList.contains("fa-trash-can")) {
     totalCount.innerText -= 1;
+    allJobQuantity.innerText -= 1;
     event.target.parentNode.parentNode.remove();
     calculateCount();
     if (totalCount.innerHTML == 0) {
