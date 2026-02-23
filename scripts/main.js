@@ -25,10 +25,8 @@ function calculateCount() {
 calculateCount();
 
 function currentJobQuantity() {
-  // console.log(currentStatus);
   if (currentStatus == "show-all-btn") {
     allJobQuantity.innerText = totalCount.innerText;
-    // console.log("num is", allJobQuantity.innerText);
   } else if (currentStatus == "show-rejected-btn") {
     allJobQuantity.innerText = rejectedList.length;
   } else if (currentStatus == "show-interview-btn") {
@@ -252,8 +250,6 @@ function renderInterview() {
   filteredSection.innerHTML = "";
 
   for (const job of interviewList) {
-    // console.log(job);
-
     let div = document.createElement("div");
     div.className = "job-card";
     div.innerHTML = `
@@ -282,8 +278,6 @@ function renderRejected() {
   filteredSection.innerHTML = "";
 
   for (const job of rejectedList) {
-    // console.log(job);
-
     let div = document.createElement("div");
     div.className = "job-card";
     div.innerHTML = `
