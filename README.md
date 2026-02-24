@@ -64,7 +64,7 @@ document.getElementById("parent").addEventListener("click", function () {
   console.log("Parent clicked");
 });
 
-// If we click the child, the child runs first then parent will runs.
+// If we click the child, the child runs first then parent will run.
 ```
 
 ---
