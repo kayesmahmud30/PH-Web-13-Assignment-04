@@ -48,7 +48,7 @@ document.body.appendChild(newDiv);
 
 ## 3️⃣ Answer To The Question No 3:
 
-### 🎯 Event Bubbling
+### 🎯 Event Bubbling and it's workflow in DOM
 
 - Event Bubbling means an event moves from child to parent.
 - If you click a child element, its parent’s event also runs.
@@ -71,7 +71,7 @@ document.getElementById("parent").addEventListener("click", function () {
 
 ## 4️⃣ Answer To The Question No 4:
 
-### 🎯 Event Delegation and it's workflow in DOM
+### 🎯 Event Delegation and it's usefulness in DOM
 
 - Event Delegation means adding a listener to a parent element instead of multiple children.
 - It works because of event bubbling.
